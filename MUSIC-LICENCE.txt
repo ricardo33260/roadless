@@ -1,0 +1,44 @@
+# Licence — Contribution Run
+
+The ten tracks of *Contribution Run* by Neon Husky are released under
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+<https://creativecommons.org/licenses/by/4.0/>
+
+## In plain terms
+
+You may use this music in videos, streams, games, podcasts, adverts and
+anything else — **commercially or not** — provided you give credit.
+
+Copy this:
+
+```
+Music: Neon Husky — "Contribution Run"
+https://neonhusky.dev — licensed CC BY 4.0
+```
+
+You may also cut, loop, remix and build on it. You do not need to ask, pay,
+or wait for a reply.
+
+## If you get a copyright claim
+
+Email <neonhusky.music@gmail.com> and it will be cleared. That should not
+happen; if it does, it is the artist's problem to fix, not the creator's.
+
+## Why CC BY rather than MIT
+
+MIT is a software licence — its text refers to "the Software" throughout, and
+its requirement to include the licence text "in all copies" is unworkable for
+a video. CC BY is built for creative works, is understood by every platform,
+and says what is actually meant here.
+
+## Provenance
+
+The music is AI-generated, produced by Kristian Arvidsson using Mureka. The
+per-track PDFs in `licence/` are Mureka **ownership certificates**, not
+commercial licences: each certifies the track as an AI music work and that
+ownership and IP rights *"(if any)"* belong to the user. That hedge is
+Mureka's. CC BY is offered on that basis — as a grant of permission and a
+promise not to pursue claims — rather than as an assertion about the
+copyright status of AI-generated work, which is unsettled in several
+jurisdictions.

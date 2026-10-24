@@ -1,0 +1,67 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Signature : fournie par des variables d'environnement (voir README).
+// Sans elles, le bundle release est genere NON signe.
+def ksFile = System.getenv('KEYSTORE_FILE')
+
+android {
+    namespace 'com.roadless.game'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.roadless.game'
+        minSdk 24
+        targetSdk 35
+        versionCode (System.getenv('VERSION_CODE') ?: '1').toInteger()
+        versionName '1.0.0'
+    }
+
+    signingConfigs {
+        release {
+            if (ksFile) {
+                storeFile file(ksFile)
+                storePassword System.getenv('KEYSTORE_PASSWORD')
+                keyAlias System.getenv('KEY_ALIAS')
+                keyPassword System.getenv('KEY_PASSWORD')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (ksFile) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    // Le jeu web (dossier /www a la racine) est embarque tel quel comme assets.
+    sourceSets {
+        main {
+            assets.srcDirs = ['../../www']
+        }
+    }
+
+    // Les MP3 sont deja compresses : ne pas les recompresser (lecture en streaming).
+    androidResources {
+        noCompress += ['mp3']
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.webkit:webkit:1.12.1'
+}
